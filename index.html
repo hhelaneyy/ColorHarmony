@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorHarmony | AI Color Palette Generator</title>
+    <link rel="icon" href="assets/icons/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-palette"></i>
+                <h1>Color<span>Harmony</span></h1>
+            </div>
+            <p class="tagline">Create beautiful color palettes with AI</p>
+        </header>
+
+        <div class="palette-container">
+            <div class="color-box" id="color1">
+                <div class="color-preview">
+                    <div class="color-overlay"></div>
+                    <div class="color-actions">
+                        <button class="lock-btn"><i class="fas fa-lock-open"></i></button>
+                        <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+                <input type="text" class="color-value" value="#FFFFFF" readonly>
+            </div>
+            <div class="color-box" id="color2">
+                <div class="color-preview">
+                    <div class="color-overlay"></div>
+                    <div class="color-actions">
+                        <button class="lock-btn"><i class="fas fa-lock-open"></i></button>
+                        <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+                <input type="text" class="color-value" value="#FFFFFF" readonly>
+            </div>
+            <div class="color-box" id="color3">
+                <div class="color-preview">
+                    <div class="color-overlay"></div>
+                    <div class="color-actions">
+                        <button class="lock-btn"><i class="fas fa-lock-open"></i></button>
+                        <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+                <input type="text" class="color-value" value="#FFFFFF" readonly>
+            </div>
+            <div class="color-box" id="color4">
+                <div class="color-preview">
+                    <div class="color-overlay"></div>
+                    <div class="color-actions">
+                        <button class="lock-btn"><i class="fas fa-lock-open"></i></button>
+                        <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+                <input type="text" class="color-value" value="#FFFFFF" readonly>
+            </div>
+            <div class="color-box" id="color5">
+                <div class="color-preview">
+                    <div class="color-overlay"></div>
+                    <div class="color-actions">
+                        <button class="lock-btn"><i class="fas fa-lock-open"></i></button>
+                        <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+                <input type="text" class="color-value" value="#FFFFFF" readonly>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="generate-btn" class="btn-primary">
+                <i class="fas fa-magic"></i> Generate Palette
+            </button>
+            <button id="random-btn" class="btn-secondary">
+                <i class="fas fa-random"></i> Random
+            </button>
+            <button id="clear-btn" class="btn-secondary">
+                <i class="fas fa-unlock-alt"></i> Clear Locks
+            </button>
+            
+            <div class="upload-section">
+                <label for="image-upload" class="upload-label">
+                    <i class="fas fa-image"></i> Extract from Image
+                    <input type="file" id="image-upload" accept="image/*">
+                </label>
+            </div>
+        </div>
+
+        <div class="export-section">
+            <h3><i class="fas fa-download"></i> Export Palette</h3>
+            <div class="export-options">
+                <button id="copy-css" class="export-btn">
+                    <i class="fab fa-css3"></i> CSS
+                </button>
+                <button id="copy-json" class="export-btn">
+                    <i class="fas fa-code"></i> JSON
+                </button>
+                <button id="copy-svg" class="export-btn">
+                    <i class="fas fa-vector-square"></i> SVG
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> by Helaney for designers & developers</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
